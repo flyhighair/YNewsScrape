@@ -72,12 +72,8 @@ def create_csv(news_list: NewsList) -> None:
         csv_writer.writerows(news_list)
 
 
-def main() -> None:
+def scrape() -> None:
     """Yahooニュースのスクレイピングを行う"""
     html = fetch_html()
     news_list = parse_news_list_from_html(html)
     create_csv(news_list)
-
-
-if __name__ == "__main__":
-    main()

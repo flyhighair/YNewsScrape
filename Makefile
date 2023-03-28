@@ -1,4 +1,4 @@
-.PHONY: lint format format-check typecheck check
+.PHONY: lint format format-check typecheck check run
 
 lint:
 		poetry run pflake8 .
@@ -16,3 +16,6 @@ check:
 		@make lint
 		@make format-check
 		@make typecheck
+
+run:
+		poetry run python -m ynewsscrape
