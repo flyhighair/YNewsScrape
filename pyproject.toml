@@ -22,3 +22,23 @@ flake8-quotes = "^3.3.2"
 [build-system]
 requires = ["poetry-core"]
 build-backend = "poetry.core.masonry.api"
+
+[tool.black]
+line-length = 79
+target-version = ["py310"]
+include = '\.py$'
+
+[tool.isort]
+profile = "black"
+
+[tool.flake8]
+max-line-length = 79
+inline-quotes = '"'
+exclude = [
+  ".git",
+  ".venv",
+  "*_cache"
+]
+
+[tool.mypy]
+python_version = "3.11"
